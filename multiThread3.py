@@ -38,12 +38,17 @@ class tWork(Thread):
 threadSer = tWork(5)
 threadSer2 = tWork(8)
 
+threadSer.setDaemon(True)   # 子线程设置为后台线程后，主线程退出，子线程也会退出
+threadSer2.setDaemon(True)
+
 threadSer.start()
 threadSer2.start()
 
 # threadSer.join()
 # threadSer2.join()
-# 是不是用join 主线程最后都会阻塞等待子线程
-for i in range(10):
-    print('why')
+
+print('end')
+# 不管是不是用join 主线程最后都会阻塞等待子线程
+# for i in range(10):
+#     print('why')
 
