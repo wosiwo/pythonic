@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding:utf-8 -*-
+
 import time, threading
 #把一个函数传入并创建Thread实例，然后调用start()开始执行
 # 新线程执行的代码:
